@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ChatGPT_Image_16_de_dez._de_2025_20_54_12.png.jpg" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>PocketUHCs</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div style="color: #fb2118" class="titlenav">
+                <h1>PocketUHCs</h1>
+            </div>
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="#">Loja</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Discord</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Youtube</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="contentbar">
+            <h1>Seja bem-vindo(a)</h1>
+            <p>
+                Oferecemos uma jogabilidade diversa e incrível, com um ambiente feito para você se divertir e fazer
+                novas amizades.
+            </p>
+
+        </div>
+
+
+        <section id="services">
+            <article id="service-card">
+                <div id="service-header">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Jogabilidade</h2>
+                </div>
+
+                <p>
+                    Jogos divertidos e variados, sempre com atualizações frequentes e novas experiências.
+                </p>
+
+            </article>
+
+            <article id="service-card">
+                <div id="service-header">
+                    <i class="fa-solid fa-comments"></i>
+                    <h2>Bate papo</h2>
+                </div>
+
+                <p>
+                    Um espaço para conversas respeitosas, descontraídas e cheias de interação.
+                </p>
+
+            </article>
+        </section>
+
+
+
+        <section id="endcontent">
+            <h3>Venha jogar conosco!</h3>
+            <p>
+                Copie o IP e a porta clicando no botão abaixo e entre agora mesmo!
+            </p>
+            <button id="cta-btn">Copiar</button>
+        </section>
+    </main>
+</body>
+<script>
+    const serverIP = "play.seuservidor.com:25565";
+    const btn = document.getElementById("cta-btn");
+
+    btn.addEventListener("click", () => {
+        navigator.clipboard.writeText(serverIP)
+            .then(() => {
+                btn.innerText = "IP copiado!";
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    btn.innerText = "Copiar";
+                    btn.disabled = false;
+                }, 2000);
+            })
+            .catch(() => {
+                alert("Erro ao copiar o IP");
+            });
+    });
+</script>
+</html>
