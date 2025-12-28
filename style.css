@@ -90,7 +90,7 @@ body {
     background: linear-gradient(135deg, #fb2118, #ff0f0f);
     border-radius: 18px;
     color: #fff;
-    box-shadow: 0 20px 40px rgba(126, 34, 255, 0.35);
+    box-shadow: 0 10px 40px rgb(255, 9, 9);
 }
 
 #endcontent h3 {
