@@ -67,3 +67,12 @@ body {
     margin: 0 auto;
     border-radius: 100px;
 }
+
+.contentbar {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fb2118;
+}
