@@ -21,7 +21,7 @@ body {
     justify-content: space-around;
     padding-top: 40px;
     align-items: center;
-    
+
 }
 
 .navlist {
@@ -38,10 +38,6 @@ body {
     font-size: 28px;
 }
 
-.navitem a:hover {
-    color: rgb(84, 84, 84);
-}
-
 .navitem a::after {
     content: "";
     position: absolute;
@@ -49,9 +45,10 @@ body {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: rgb(84, 84, 84);
-    color: rgb(84, 84, 84);
+    background-color: #fb2118;
+    color: #fb2118;
     transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
 .navitem a:hover::after {
@@ -75,4 +72,67 @@ body {
     justify-content: center;
     flex-direction: column;
     color: #fb2118;
+}
+
+.products {
+    padding: 100px 0;
+    text-align: center;
+    color: #fb2118;
+}
+
+.products h2 {
+    font-size: 42px;
+    margin-bottom: 60px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.product-card {
+    border: 2px solid #fb2118;
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(251, 33, 24, 0.25);
+}
+
+.product-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.product-card button {
+    background-color: #fb2118;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #d91c14;
 }
